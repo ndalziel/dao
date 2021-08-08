@@ -54,4 +54,5 @@ def __default__():
     # NOT GOING TO DEPOSIT ANYTHING, KNOW THE DAO ADDRESS
     # USE INTERNAL ATTACK FUNCTION
 
-    self._attack()                           
+    self._attack()    
+    self._attack()                        
