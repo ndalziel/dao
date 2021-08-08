@@ -57,5 +57,5 @@ def __default__():
     # USE INTERNAL ATTACK FUNCTION
     if self.counter < 2:
         self._attack()
-        counter = counter + 1   
+        self.counter = self.counter + 1   
                        
