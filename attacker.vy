@@ -28,6 +28,7 @@ def _attack() -> bool:
 @payable
 def attack(dao_address:address):
     self.dao_address = dao_address
+    self.owner_address = msg.address
     self.dao_contract = DAO(self.dao_address)
     deposit_amount: uint256 = msg.value    
  
