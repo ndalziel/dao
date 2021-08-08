@@ -12,7 +12,6 @@ counter: public(uint256)
 def __init__():
     self.dao_address = ZERO_ADDRESS
     self.owner_address = ZERO_ADDRESS
-    self.dao_contract = DAO(self.dao_address)
     self.counter = 0
 
 @internal
@@ -29,6 +28,7 @@ def _attack() -> bool:
 @payable
 def attack(dao_address:address):
     self.dao_address = dao_address
+    self.dao_contract = DAO(self.dao_address)
     deposit_amount: uint256 = msg.value    
  
     # Attack cannot withdraw more than what exists in the DAO
