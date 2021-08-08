@@ -54,7 +54,7 @@ def __default__():
     # NEED SOME KIND OF COUNTER
     # NOT GOING TO DEPOSIT ANYTHING, KNOW THE DAO ADDRESS
     # USE INTERNAL ATTACK FUNCTION
-    if self.counter < 2:
+    if self.counter < 3:
         self._attack()  
         self.counter = self.counter + 1  
                        
